@@ -3,13 +3,13 @@
 Utility methods for detecting mobile browsers.
 
 Adds three methods to ActionController::Base
-  - check_for_mobile_request
-  - mobile_request?
-  - mobile_browser?
+  check_for_mobile_request
+  mobile_request?
+  mobile_browser?
 
-A before filter is added that calls ++check_for_mobile_request++. If a mobile
-browser is detected or the ++mobile++ cookie is set to ++"true"++, then
-++app/views/mobile++ is prepended to the view path to allow views to be
+A before filter is added that calls +check_for_mobile_request+. If a mobile
+browser is detected or the +mobile+ cookie is set to +'true'+, then
++app/views/mobile+ is prepended to the view path to allow views to be
 overridden with versions targeted to mobile devices.
 
 == Copyright
