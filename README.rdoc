@@ -10,7 +10,8 @@ Adds three methods to ActionController::Base
 A before filter is added that calls +check_for_mobile_request+. If a mobile
 browser is detected or the +mobile+ cookie is set to 'true', then
 +app/views/mobile+ is prepended to the view path to allow views to be
-overridden with versions targeted to mobile devices.
+overridden with versions targeted to mobile devices. The +mobile+ cookie can be
+set to 'false' in order to ignore the mobile browser and serve the full site.
 
 == Copyright
 
