@@ -4,6 +4,8 @@ module MobileDetection
 
     included do
       before_filter :check_for_mobile_request
+      helper_method :mobile_browser?
+      helper_method :mobile_request?
     end
 
     module InstanceMethods
