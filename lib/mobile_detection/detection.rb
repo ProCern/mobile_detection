@@ -17,7 +17,7 @@ module MobileDetection
       end
 
       def mobile_browser?
-        request.user_agent =~ /Mobile|webOS|Android/
+        request.user_agent =~ /Mobile|webOS|Android/ && !request.user_agent.include?('iPad')
       end
 
       def mobile_request?
