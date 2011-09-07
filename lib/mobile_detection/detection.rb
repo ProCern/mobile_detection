@@ -14,6 +14,14 @@ module MobileDetection
           prepend_view_path Rails.root + 'app/views/mobile'
           cookies[:mobile] = 'true'
         end
+
+        if defined? ChromeHelpers::TemplateResolver
+          view_paths.each do |view_path|
+            if view_path.is_a? ChromeHelpers::TemplateResolver
+              view_path.mobile = (cookies[:mobile] == 'true')
+            end
+          end
+        end
       end
 
       def mobile_browser?
